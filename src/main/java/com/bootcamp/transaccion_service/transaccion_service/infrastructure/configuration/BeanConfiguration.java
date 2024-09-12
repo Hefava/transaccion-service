@@ -4,6 +4,7 @@ import com.bootcamp.transaccion_service.transaccion_service.domain.api.ISuminist
 import com.bootcamp.transaccion_service.transaccion_service.domain.api.usecase.SuministroUseCase;
 import com.bootcamp.transaccion_service.transaccion_service.domain.spi.IArticuloPersistencePort;
 import com.bootcamp.transaccion_service.transaccion_service.domain.spi.ISuministroPersistencePort;
+import com.bootcamp.transaccion_service.transaccion_service.domain.spi.IUsuarioPersistencePort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,10 +17,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public class BeanConfiguration {
     private final IArticuloPersistencePort articuloPersistencePort;
     private final ISuministroPersistencePort suministroPersistencePort;
+    private final IUsuarioPersistencePort usuarioPersistencePort;
 
     @Bean
     public ISuministroServicePort suministroServicePort() {
-        return new SuministroUseCase(suministroPersistencePort, articuloPersistencePort);
+        return new SuministroUseCase(suministroPersistencePort, articuloPersistencePort, usuarioPersistencePort);
     }
 
     @Bean

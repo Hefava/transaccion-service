@@ -29,4 +29,7 @@ public class SuministroEntity {
     @Column(name = "fechaCreacion", nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(name = "usuarioID", nullable = false)
+    private Long usuarioID;
+
 }

@@ -7,15 +7,25 @@ public class Suministro {
     private Long articuloID;
     private Long cantidad;
     private LocalDateTime fechaCreacion;
+    private Long usuarioID;
 
     public Suministro() {
     }
 
-    public Suministro(Long suministroID, Long articuloID, Long cantidad, LocalDateTime fechaCreacion) {
+    public Suministro(Long suministroID, Long articuloID, Long cantidad, LocalDateTime fechaCreacion, Long usuarioID) {
         this.suministroID = suministroID;
         this.articuloID = articuloID;
         this.cantidad = cantidad;
         this.fechaCreacion = fechaCreacion;
+        this.usuarioID = usuarioID;
+    }
+
+    public Long getUsuarioID() {
+        return usuarioID;
+    }
+
+    public void setUsuarioID(Long usuarioID) {
+        this.usuarioID = usuarioID;
     }
 
     public LocalDateTime getFechaCreacion() {
