@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "suministro")
 @NoArgsConstructor
@@ -23,4 +25,8 @@ public class SuministroEntity {
 
     @Column(name = "cantidad", nullable = false)
     private Long cantidad;
+
+    @Column(name = "fechaCreacion", nullable = false)
+    private LocalDateTime fechaCreacion;
+
 }

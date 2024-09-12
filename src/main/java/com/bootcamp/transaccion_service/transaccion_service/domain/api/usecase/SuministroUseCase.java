@@ -5,6 +5,8 @@ import com.bootcamp.transaccion_service.transaccion_service.domain.model.Suminis
 import com.bootcamp.transaccion_service.transaccion_service.domain.spi.IArticuloPersistencePort;
 import com.bootcamp.transaccion_service.transaccion_service.domain.spi.ISuministroPersistencePort;
 
+import java.time.LocalDateTime;
+
 public class SuministroUseCase implements ISuministroServicePort {
     private final ISuministroPersistencePort suministroPersistencePort;
     private final IArticuloPersistencePort articuloPersistencePort;
@@ -17,6 +19,7 @@ public class SuministroUseCase implements ISuministroServicePort {
     @Override
     public void agregarSuministro(Suministro suministro) {
         articuloPersistencePort.sumarExistencia(suministro.getArticuloID(), suministro.getCantidad());
+        suministro.setFechaCreacion(LocalDateTime.now());
         suministroPersistencePort.agregarSuministro(suministro);
     }
 }

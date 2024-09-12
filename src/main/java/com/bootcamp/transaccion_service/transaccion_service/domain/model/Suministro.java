@@ -1,17 +1,29 @@
 package com.bootcamp.transaccion_service.transaccion_service.domain.model;
 
+import java.time.LocalDateTime;
+
 public class Suministro {
     private Long suministroID;
     private Long articuloID;
     private Long cantidad;
+    private LocalDateTime fechaCreacion;
 
     public Suministro() {
     }
 
-    public Suministro(Long suministroID, Long articuloID, Long cantidad) {
+    public Suministro(Long suministroID, Long articuloID, Long cantidad, LocalDateTime fechaCreacion) {
         this.suministroID = suministroID;
         this.articuloID = articuloID;
         this.cantidad = cantidad;
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     public Long getSuministroID() {
