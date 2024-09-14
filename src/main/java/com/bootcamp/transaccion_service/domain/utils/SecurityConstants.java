@@ -7,6 +7,8 @@ public class SecurityConstants {
 
     public static final String ACCESO_DENEGADO = "Acceso denegado: No tienes permiso para acceder a este recurso.";
 
+    public static final String AUTHORIZATION = "Authorization";
+
     private SecurityConstants() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
