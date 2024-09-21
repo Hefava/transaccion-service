@@ -1,4 +1,4 @@
-package com.bootcamp.transaccion_service.infrastructure.configuration;
+package com.bootcamp.transaccion_service.ports.feign;
 
 import com.bootcamp.transaccion_service.domain.utils.TokenHolder;
 import com.bootcamp.transaccion_service.infrastructure.exceptionhandler.FeignErrorDecoder;

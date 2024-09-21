@@ -1,6 +1,6 @@
 package com.bootcamp.transaccion_service.infrastructure.security;
 
-import com.bootcamp.transaccion_service.infrastructure.configuration.FeingClientConfiguration;
+import com.bootcamp.transaccion_service.ports.feign.FeingClientConfiguration;
 import com.bootcamp.transaccion_service.ports.application.http.dto.UsuarioResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -47,4 +47,18 @@ public class SuministroRestController {
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    @Operation(
+            summary = "Obtener Fecha de Abastecimiento",
+            description = "Retorna la fecha en la que el artículo se abastecerá, 15 días después de la fecha actual."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Fecha de abastecimiento calculada con éxito", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "500", description = "Error interno del servidor", content = @Content)
+    })
+    @GetMapping("/fecha-abastecimiento")
+    public ResponseEntity<String> obtenerFechaAbastecimiento() {
+        String mensaje = suministroServicePort.obtenerFechaAbastecimiento();
+        return ResponseEntity.ok(mensaje);
+    }
 }
