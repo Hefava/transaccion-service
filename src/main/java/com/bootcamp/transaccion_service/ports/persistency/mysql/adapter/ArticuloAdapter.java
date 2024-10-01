@@ -15,4 +15,9 @@ public class ArticuloAdapter implements IArticuloPersistencePort {
     public void sumarExistencia(Long articuloID, Long cantidad) {
         articuloFeign.agregarCantidadArticulo(articuloID, cantidad);
     }
+
+    @Override
+    public void restarExistencia(Long articuloID, Long cantidad) {
+        articuloFeign.restarCantidadArticulo(articuloID, cantidad);
+    }
 }

@@ -14,5 +14,16 @@ public class SuministroConstants {
     public static final String RECURSO_NO_ENCONTRADO = "Recurso no encontrado: ";
     public static final String ERROR_INTERNO_SERVIDOR = "Error interno del servidor";
     public static final String ERROR_DESCONOCIDO = "Error desconocido al leer la respuesta";
-    public static final String STOCK_SERRVER_ERROR = "El servicio de stock no está disponible, intente más tarde.";
+    public static final String EL_ARTICULO = "El artículo ";
+    public static final String NO_IENE_STOCK = " no tiene stock disponible";
+    public static final String VENTA_REALIZADA = "Venta realizada con éxito";
+    public static final String ERROR_CANTIDAD = "La cantidad debe ser mayor que 0.";
+    public static final long MIN_CANTIDAD = 1L;
+
+    public static final String ERROR_VENTA = "Error al realizar la venta";
+    public static final String SORT_BY_NAME = "nombre";
+    public static final String ORDER_ASC = "asc";
+    public static final Long DEFAULT_ARTICULO_ID = 1L;
+    public static final int DEFAULT_PAGE_NUMBER = 0;
+    public static final int DEFAULT_PAGE_SIZE = 10000;
 }

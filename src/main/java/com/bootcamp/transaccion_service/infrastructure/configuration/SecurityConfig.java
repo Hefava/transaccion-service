@@ -36,6 +36,7 @@ public class SecurityConfig {
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                         .requestMatchers("/suministro/agregar-suministro").hasRole(ROL_AUX_BODEGA)
                         .requestMatchers("/suministro/fecha-abastecimiento").hasRole(ROL_CLIENTE)
+                        .requestMatchers("/venta/realizar").hasRole(ROL_CLIENTE)
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exception -> exception
